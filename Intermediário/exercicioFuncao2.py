@@ -14,3 +14,10 @@ def paridade2(numero):
         print(f"{numero} é ímpar")
 
 paridade2(5)
+
+# Melhor prática:
+def paridade3(numero):
+    if numero % 2 == 0:
+        return True
+    return False
+print(paridade3(8))
