@@ -10,18 +10,17 @@ produtos = [
 ]
 
 aumento_preco = [
-    {**produto, 'preco': produto['preco'] * 1.1 }
+    {**produto, 'preco': round(produto['preco'] * 1.1, 2) } # Duas casas decimais
     for produto in produtos
 ]
 
-
 if __name__ == "__main__":
-    print('Ordenando preço pelo import')
-
+    
     nome_decrescente = ordena_decrescente(aumento_preco, 'nome')
     valor_crescente = ordena_crescente(aumento_preco, 'preco')
-
+    print('Ordenando nome pelo import')
     print(*nome_decrescente, sep='\n')
     print("="*50)
+    print('Ordenando preço pelo import')
     print(*valor_crescente, sep='\n')
 
