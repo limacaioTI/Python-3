@@ -48,4 +48,10 @@ carlos = Gerente("Carlos", "Cunha", 9836, "Niteroi")
 
 lucas = Cliente("Lucas", "Santos", 4590456314)
 
-print(f"Nome: {joao.nome}\nSobrenome: {joao.sobrenome}\n")
+# O print de "cod" funciona pois printamos cod_func e não o o _cod que é protected
+print(f"Nome: {joao.nome}\nSobrenome: {joao.sobrenome}\nCOD: {joao.cod_func}\nCargo: {joao.cargo}")
+print()
+print(f"Nome: {carlos.nome}\nSobrenome: {carlos.sobrenome}\nCOD: {carlos.cod_func}\nFilial: {carlos.filial}")
+print()
+print(f"Nome: {lucas.nome}\nSobrenome: {lucas.sobrenome}\nID: {lucas.id_cliente}\n")
+
