@@ -8,16 +8,17 @@ The character 'l' at index 0 is the first character that does not occur at any o
 """
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        self.s = s
-        
-        for i in s:
-            count = 0
+        count = {}
 
-            for j in s:
-                if i == j:
-                    count+=1
-            if count == 1:
-                return s.index(i)
+        # Conta frequência
+        for char in s:
+            count[char] = count.get(char, 0) + 1
+
+        # Encontra o primeiro único
+        for i, char in enumerate(s):
+            if count[char] == 1:
+                return i
+
         return -1
 
 solution = Solution()
